@@ -8,3 +8,4 @@ RUN conda install numpy
 RUN conda install xarray
 RUN conda install dask
 RUN conda install netcdf4
+COPY /data/ /data
