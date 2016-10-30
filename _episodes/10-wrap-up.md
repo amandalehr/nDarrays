@@ -1,7 +1,7 @@
 ---
 title: "Wrap-Up"
 teaching: 0
-exercises: 5
+exercises: 0
 questions:
 - "What have we learned?"
 objectives:

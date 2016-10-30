@@ -1,6 +1,6 @@
 ---
 title: "out-of-core computation"
-teaching: 10
+teaching: 5
 exercises: 5
 questions:
 - "How can we do computations on array datasets that are too large to fit into memory on a local machine?"
