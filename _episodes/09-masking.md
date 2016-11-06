@@ -17,7 +17,7 @@ So far we have used indexing to return subsets of the original. The subset array
 Suppose we need to determine which grid cells had temperatures > 20 deg C on June 21, 1984? We will use [where()](http://xarray.pydata.org/en/stable/indexing.html#masking-with-where) for this selection:
 
 ~~~~
-ds.sel(time="1984-06-21")['t2m'].where(subset.t2m > 293.15).plot()
+ds.sel(time="1984-06-21")['t2m'].where(ds.t2m > 293.15).plot()
 ~~~
 {: .python}
 
@@ -38,11 +38,12 @@ ds.sst.isel(time=0).plot()
 
 ### Buliding the mask:
 
-Here we'll use some lower-level numpy commands to build the mask. The mask number depends on whether the cells are finite or NaN:
+Here we'll use some lower-level numpy commands to build the mask (and we'll need to import the numpy library). The mask number depends on whether the cells are finite or NaN:
 
 ~~~
-mask_ocean = 2 * np.ones((subset.dims['latitude'], subset.dims['longitude'])) * np.isfinite(subset.sst.isel(time=0))  
-mask_land = 1 * np.ones((subset.dims['latitude'], subset.dims['longitude'])) * np.isnan(subset.sst.isel(time=0))  
+import numpy as np
+mask_ocean = 2 * np.ones((ds.dims['latitude'], ds.dims['longitude'])) * np.isfinite(ds.sst.isel(time=0))  
+mask_land = 1 * np.ones((ds.dims['latitude'], ds.dims['longitude'])) * np.isnan(ds.sst.isel(time=0))  
 mask_array = mask_ocean + mask_land
 mask_array.plot()
 ~~~

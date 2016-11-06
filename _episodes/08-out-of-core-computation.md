@@ -33,7 +33,7 @@ When xarray carries out processing on an array it must load it into memory. Many
 We will use the [mfdataset](http://xarray.pydata.org/en/stable/generated/xarray.open_mfdataset.html#xarray.open_mfdataset) option that opens multiple files as a single xarray dataset. This automatically invokes the dask functionality:
 
 ~~~
-ds = xr.open_mfdataset(r'c:/work/mnt/ecmwf/*_global.nc', engine = 'scipy', chunks = {'time':10})
+ds = xr.open_mfdataset('<root_dir>*_AK.nc', chunks = {'time':10})
 ~~~
 {: .python}
 

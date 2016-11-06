@@ -65,9 +65,10 @@ map_data.plot()
 <img src="../fig/2dPlot.png" width = "600" border = "10">
 <br>
 
-Customization can occur following standard Matplotlib syntax:
+Customization can occur following standard Matplotlib syntax. Note that before we use matplotlib, we will have to import that library:
 
 ~~~
+import matplotlib.pyplot as plt
 map_data.plot(cmap=plt.cm.Blues)
 plt.title('ECMWF global air temperature data')
 plt.ylabel('latitude')

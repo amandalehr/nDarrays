@@ -31,3 +31,8 @@ If you visit the ECMWF page you will find that you can download a large number o
 Note 1: when loading the data into xarray, we will use "engine = scipy" for all of the global datasets. You do not need to specify an engine for the AK datasets.
 
 Note 2: many of our examples follow from and expand on xarray developer Stephan Hoyer's [blog post](https://www.continuum.io/content/xray-dask-out-core-labeled-arrays-python).
+
+## Data Access:
+
+* Alaska subsets are pre-loaded into the docker containers
+* via ftp: host = ftp.cloudmaven.org (user/password to be provided)
