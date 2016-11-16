@@ -16,7 +16,7 @@ keypoints:
 Let's start visualizing some of the data slices we've been working on so far. We will begin by creating a new variable for plotting a 1-dimensional time series:
 
 ~~~
-time_series = ds['t2m'].sel(time=slice('1979-01-01T06:00:00', '1979-06-01T06:00:00'), latitude=0.0, longitude=0.0)
+time_series = ds['t2m'].sel(time=slice('1979-01-01T06:00:00', '1979-06-01T06:00:00'), latitude=75.0, longitude=180.0)
 ~~~
 {: .python}
 
