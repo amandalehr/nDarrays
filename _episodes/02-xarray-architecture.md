@@ -69,7 +69,7 @@ import xarray as xr
 First we [open](http://xarray.pydata.org/en/stable/generated/xarray.open_dataset.html) the data and load it into a `Dataset`. (Note: the choice of engine depends on the format of the netCDF file. See our [dataset description](../00-datasets) lesson).
 
 ~~~
-ds = xr.open_dataset('<rootDir>/airtemp_global.nc', engine='scipy')
+ds = xr.open_dataset('../data/airtemp_global.nc')
 ~~~
 {: .python}
 
