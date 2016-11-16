@@ -35,7 +35,8 @@ Now, sometimes we need to apply mathematical functions to array data in our anal
 
 ~~~
 import xarray.ufuncs as xu
-wind = xarray.open_mfdataset(r'c:/work/mnt/ecmwf/*wind_AK.nc').sel(time="1984-01-01")
+import matplotlib.pyplot as plt
+wind = xr.open_mfdataset(r'c:/work/mnt/ecmwf/*wind_AK.nc').sel(time="1984-01-01T06:00:00")
 windspeed = xu.sqrt(wind.u10**2+wind.v10**2)
 ~~~
 {: .python}
